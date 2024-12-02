@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: blue;
+            font-size: large;
+        }
+    </style>
+    <title>true</title>
+</head>
+
+<body>
+    <label>ENTER HOUR</label>
+    <input type="number" id="hour">
+    <button onclick="CheckHour()">CHECK</button>
+    <h1 id="hy"></h1>
+    <script>
+        function CheckHour() {
+            const hour=document.getElementById('hour').value;
+
+            if (hour <= 12 && hour >= 0){
+            document.getElementById('hy').innerHTML="GOOD MORNING";
+            }
+            else if(hour >=13 && hour <= 17) {
+                document.getElementById('hy').innerHTML="GOOD AFTERNOON";
+
+            }
+            else if(hour >= 18 && hour <= 23){
+                document.getElementById('hy').innerHTML="GOOD   EVINING";
+
+            }
+            else {
+                document.getElementById('hy').innerHTML="ERROR";
+
+
+            }
+
+
+            
+        }
+    </script>    
+</body>
+</html>
